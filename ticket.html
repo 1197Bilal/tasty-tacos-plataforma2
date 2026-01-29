@@ -132,6 +132,9 @@
                     const json = safeAtob(dataRaw);
                     const order = JSON.parse(json);
 
+                    // DEBUG: Comprobar qué llega
+                    // alert(JSON.stringify(order)); 
+
                     document.getElementById('t-name').innerText = order.n;
                     document.getElementById('t-phone').innerText = order.ph;
                     document.getElementById('t-name').innerText = order.n;
