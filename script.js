@@ -55,7 +55,7 @@ const BEBIDAS = [
 
 let cart = [];
 let tempItem = {};
-let currentDeliveryMode = 'pickup'; // 'pickup' | 'delivery'
+let currentDeliveryMode = 'delivery'; // 'pickup' | 'delivery'
 let deliveryFee = 2.00;
 
 // --- INICIALIZAR ---
@@ -81,6 +81,9 @@ window.onload = function () {
                 </div>
             </div>`;
     });
+
+    // Forzar UI a modo Delivery por defecto
+    setDeliveryMode('delivery');
 };
 
 function renderSection(type, items, containerId) {
