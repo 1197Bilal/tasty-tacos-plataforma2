@@ -134,49 +134,55 @@
         </div>
     </nav>
 
-    <main class="mt-40 px-4 space-y-8 max-w-2xl mx-auto">
+    <main class="mt-40 px-4 space-y-12 max-w-7xl mx-auto pb-32">
 
-        <div class="relative h-56 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-            <img src="assets/hero.jpg" class="w-full h-full object-cover opacity-80" alt="Tasty Tacos Hero">
+        <div class="relative h-56 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
+            <img src="assets/hero.jpg"
+                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                alt="Tasty Tacos Hero">
             <div class="absolute inset-0 bg-gradient-to-t from-[#1a1818] via-transparent to-transparent"></div>
-            <div class="absolute bottom-5 left-5">
-                <span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded mb-2 inline-block">COLLADO
+            <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10">
+                <span
+                    class="bg-primary text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded mb-3 inline-block tracking-widest shadow-lg">COLLADO
                     VILLALBA</span>
-                <h1 class="font-display text-4xl font-bold text-white leading-none shadow-black drop-shadow-md">EL
+                <h1
+                    class="font-display text-5xl md:text-7xl font-bold text-white leading-none shadow-black drop-shadow-md">
+                    EL
                     SABOR<br>URBANO</h1>
             </div>
         </div>
 
         <section id="tacos" class="scroll-mt-48">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="h-8 w-1.5 bg-primary rounded-full"></div>
-                <h2 class="font-display text-3xl font-bold text-white">FRENCH TACOS</h2>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-10 w-2 bg-primary rounded-full shadow-[0_0_15px_#a61e1e]"></div>
+                <h2 class="font-display text-4xl font-bold text-white tracking-tight">FRENCH TACOS</h2>
             </div>
-            <div class="grid gap-4" id="tacos-container"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="tacos-container"></div>
         </section>
 
         <section id="burgers" class="scroll-mt-48">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="h-8 w-1.5 bg-secondary rounded-full"></div>
-                <h2 class="font-display text-3xl font-bold text-white">HAMBURGUESAS</h2>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-10 w-2 bg-secondary rounded-full shadow-[0_0_15px_#d4af37]"></div>
+                <h2 class="font-display text-4xl font-bold text-white tracking-tight">HAMBURGUESAS</h2>
             </div>
-            <div class="grid gap-4" id="burgers-container"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="burgers-container">
+            </div>
         </section>
 
         <section id="bowls" class="scroll-mt-48">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="h-8 w-1.5 bg-accent rounded-full"></div>
-                <h2 class="font-display text-3xl font-bold text-white">BOWLS</h2>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-10 w-2 bg-accent rounded-full shadow-[0_0_15px_#ff5722]"></div>
+                <h2 class="font-display text-4xl font-bold text-white tracking-tight">BOWLS</h2>
             </div>
-            <div class="grid gap-4" id="bowls-container"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="bowls-container"></div>
         </section>
 
         <section id="extras" class="scroll-mt-48">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="h-8 w-1.5 bg-gray-500 rounded-full"></div>
-                <h2 class="font-display text-3xl font-bold text-white">EXTRAS & POSTRES</h2>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-10 w-2 bg-gray-500 rounded-full shadow-[0_0_15px_gray]"></div>
+                <h2 class="font-display text-4xl font-bold text-white tracking-tight">EXTRAS & POSTRES</h2>
             </div>
-            <div class="grid grid-cols-2 gap-3" id="extras-container"></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" id="extras-container"></div>
         </section>
     </main>
 
