@@ -589,14 +589,19 @@ function sendOrder() {
         n: i.note
     }));
 
+    const shipping = currentDeliveryMode === 'delivery' ? deliveryFee : 0;
+    const finalTotal = (parseFloat(totalValue) + shipping).toFixed(2);
+
     const orderData = {
         n: name,
         ph: phoneClient,
         a: addr,
         p: pay,
         ch: change,
+        dm: currentDeliveryMode,
+        shp: shipping,
         c: shortCart,
-        t: totalValue
+        t: finalTotal
     };
 
     // Codificación Robusta UTF-8 + Base64 (URL Safe)
