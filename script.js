@@ -551,8 +551,13 @@ function sendOrder() {
     const pay = document.getElementById('cust-payment').value;
     const change = document.getElementById('cust-change').value;
 
-    if (!name || !phoneClient || !addr) {
-        alert("⚠️ Faltan datos: Nombre, Teléfono y Dirección son obligatorios");
+    if (!name || !phoneClient) {
+        alert("⚠️ Faltan datos: Nombre y Teléfono son obligatorios");
+        return;
+    }
+
+    if (currentDeliveryMode === 'delivery' && !addr) {
+        alert("⚠️ Para envío a domicilio la dirección es obligatoria");
         return;
     }
 
