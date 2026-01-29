@@ -57,8 +57,6 @@ let cart = [];
 let tempItem = {};
 let currentDeliveryMode = 'pickup'; // 'pickup' | 'delivery'
 let deliveryFee = 2.00;
-let currentDeliveryMode = 'pickup'; // 'pickup' | 'delivery'
-let deliveryFee = 2.00;
 
 // --- INICIALIZAR ---
 window.onload = function () {
