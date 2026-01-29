@@ -134,7 +134,15 @@
 
                     document.getElementById('t-name').innerText = order.n;
                     document.getElementById('t-phone').innerText = order.ph;
-                    document.getElementById('t-addr').innerText = order.a;
+                    document.getElementById('t-name').innerText = order.n;
+                    document.getElementById('t-phone').innerText = order.ph;
+
+                    // Lógica Delivery visual
+                    if (order.dm === 'delivery') {
+                        document.getElementById('t-addr').innerHTML = `<strong>🛵 A DOMICILIO</strong><br>${order.a}`;
+                    } else {
+                        document.getElementById('t-addr').innerHTML = `<strong>🥡 RECOGER EN LOCAL</strong><br>Sin dirección`;
+                    }
 
                     if (order.nt) {
                         document.getElementById('t-note').innerText = order.nt;
@@ -164,6 +172,19 @@
                         `;
                         itemsContainer.appendChild(div);
                     });
+
+                    // Añadir gastos de envío si existen
+                    if (order.shp && order.shp > 0) {
+                        const divShp = document.createElement('div');
+                        divShp.innerHTML = `
+                            <div class="line"></div>
+                            <div class="item">
+                                <span>Gastos de Envío</span>
+                                <span>+${order.shp.toFixed(2)}€</span>
+                            </div>
+                        `;
+                        itemsContainer.appendChild(divShp);
+                    }
 
                     setTimeout(() => window.print(), 500);
 
